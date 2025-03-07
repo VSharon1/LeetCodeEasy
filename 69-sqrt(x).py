@@ -5,7 +5,7 @@ class Solution:
 
         while left <= right:
             middle = left + ((right - left) // 2)
-            
+
             if middle**2 > x:
                 right = middle - 1
             elif middle**2 < x:
@@ -13,5 +13,5 @@ class Solution:
                 result = middle
             else:
                 return middle
-            
+
         return result
