@@ -1,6 +1,6 @@
 class Solution:
     def mySqrt(self, x: int) -> int:
-        left = 0 
+        left = 0
         right = x
         result = 0
 
