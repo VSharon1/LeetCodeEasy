@@ -3,17 +3,32 @@ from typing import List
 
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
-        low = 0
-        high = len(nums)
+        # Hash Set Method:
+        nums_set = set(nums)
 
-        nums.sort()
+        for i in range(len(nums) + 1):
+            if i not in nums_set:
+                return i
 
-        while low < high:
-            mid = low + (high - low) // 2
+        # Hash Table Method:
+        # nums_dict = {num: num for num in nums}
 
-            if nums[mid] != mid:
-                high = mid
-            else:
-                low = mid + 1
+        # for i in range(len(nums) + 1):
+        #     if i not in nums_dict:
+        #         return i
 
-        return low
+        # Binary Search Method:
+        # low = 0
+        # high = len(nums)
+
+        # nums.sort()
+
+        # while low < high:
+        #     mid = low + (high - low) // 2
+
+        #     if nums[mid] != mid:
+        #         high = mid
+        #     else:
+        #         low = mid + 1
+
+        # return low
